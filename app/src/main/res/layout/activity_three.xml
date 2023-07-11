@@ -107,20 +107,27 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/btnInsert"
+            android:id="@+id/btnUpdate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="#70B9B1"
-            android:text="INSERT" />
+            android:text="UPDATE" />
 
         <Button
-            android:id="@+id/btnList"
+            android:id="@+id/btnDelete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="#70B9B1"
-            android:text="SHOW LIST" />
+            android:text="DELETE" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#70B9B1"
+        android:text="CANCEL" />
 
 </LinearLayout>
