@@ -24,6 +24,9 @@ public class Song implements Serializable {
     public String getSinger() { return singer; }
     public String getYear() { return year; }
     public int getRating() { return rating; }
+    public String getStar(){
+        String star = "⭐".repeat(rating);
+        return star; }
 
     @NonNull
     @Override

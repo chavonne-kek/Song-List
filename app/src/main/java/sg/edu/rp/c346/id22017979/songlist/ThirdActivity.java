@@ -27,6 +27,7 @@ public class ThirdActivity extends AppCompatActivity {
         btnUpdate = findViewById(R.id.btnUpdate);
         btnDelete = findViewById(R.id.btnDelete);
         btnBack = findViewById(R.id.btnBack);
+
         r1 = findViewById(R.id.radioButton1);
         r2 = findViewById(R.id.radioButton2);
         r3 = findViewById(R.id.radioButton3);

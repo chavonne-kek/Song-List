@@ -20,7 +20,8 @@ public class SecondActivity extends AppCompatActivity {
     Button btn5star,btnBack;
     ListView lv;
     Spinner spn;
-    ArrayAdapter aaSongs;
+    //ArrayAdapter aaSongs;
+    CustomAdapter aaSongs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +35,8 @@ public class SecondActivity extends AppCompatActivity {
 
         DBHelper db = new DBHelper(SecondActivity.this);
         ArrayList<Song> songs = db.getSongs();
-        aaSongs = new ArrayAdapter<Song>(this, android.R.layout.simple_list_item_1, songs);
         db.close();
+        aaSongs = new CustomAdapter(this, R.layout.row, songs);
         lv.setAdapter(aaSongs);
 
         String txt = "";
@@ -44,6 +45,7 @@ public class SecondActivity extends AppCompatActivity {
             txt += songs.get(i);
             aaSongs.add(txt);
             txt = "";
+            aaSongs.notifyDataSetChanged();
         }
             btn5star.setOnClickListener(new View.OnClickListener() {
                 @Override
